@@ -30,12 +30,16 @@ namespace :scraper do
 
 end
 
-# returns an array of strings ['item one name', ...]
-def find_item_names(doc)
-end
-
 def create_item_types(item_names)
   item_names.each do |name|
     ItemType.create(:name => name)
   end
+end
+
+def delete_existing_items
+  ItemType.delete_all
+end
+
+# returns an array of strings ['item one name', ...]
+def find_item_names(doc)
 end
