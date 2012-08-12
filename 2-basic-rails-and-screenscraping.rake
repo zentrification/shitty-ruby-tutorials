@@ -10,6 +10,7 @@ require 'Nokogiri'
 namespace :scraper do
 
   # make our task require the rails environment
+  desc 'scrape our data'
   task :scrape => :environment do
     # remove existing scraped data so we can rerun rake scraper:scrape
     delete_existing_items
